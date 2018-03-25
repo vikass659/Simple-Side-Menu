@@ -28,7 +28,7 @@ class VCBase: UIViewController, SideMenuDelegate {
     func sideMenuItemSelectedAtIndex(_ index: Int32)
     {
         let topViewController : UIViewController = self.navigationController!.topViewController!
-        print("View Controller is : \(topViewController) \n")
+        print("Base View Controller is : \(topViewController) \n")
         
         if (menuItems.indices.contains(Int(index)))
         {
@@ -83,7 +83,7 @@ class VCBase: UIViewController, SideMenuDelegate {
         VC.delegate = self
         
         //self.view.addSubview(VC.view)
-        UIApplication.shared.keyWindow?.addSubview(VC.view) //@ need to check
+        UIApplication.shared.keyWindow?.addSubview(VC.view)
         self.addChildViewController(VC)
         VC.view.layoutIfNeeded()
         
